@@ -2,10 +2,12 @@
 import Image from "next/image";
 import { useTransform, useScroll, motion, MotionValue, AnimationPlaybackControls, animate } from "framer-motion";
 import { useEffect, useRef } from "react";
+import Section1 from "~/components/Section1";
 
 export default function Home() {
     const containerRef = useRef<HTMLDivElement>(null);
     const containerRef2 = useRef<HTMLDivElement>(null);
+    
     const animControls = useRef<AnimationPlaybackControls>();
 
 
@@ -37,6 +39,7 @@ export default function Home() {
     }, []);
     return (
         <>
+           <Section1 />
             <div className="h-[70svh]">
                 <div className="sticky top-0 text-center">
                     <h1 className="text-7xl tracking-tighter font-bold">
