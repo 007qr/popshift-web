@@ -1,28 +1,40 @@
 "use client";
 import Image from "next/image";
-import { useTransform, useScroll, motion, MotionValue } from "framer-motion";
-import { useRef } from "react";
+import { useTransform, useScroll, motion, MotionValue, AnimationPlaybackControls, animate } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 export default function Home() {
     const containerRef = useRef<HTMLDivElement>(null);
     const containerRef2 = useRef<HTMLDivElement>(null);
+    const animControls = useRef<AnimationPlaybackControls>();
+
 
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start end", "end start"],
     });
 
-    const container2Scroll = useScroll({
+    useScroll({
       target: containerRef2,
-      offset: ['center', 'start end']
-    })
+      offset: ['start center', 'end end']
+  }).scrollYProgress.on("change", (yProgress) => {
+      if (!animControls.current) return;
+      animControls.current.time = yProgress * animControls.current.duration;
+  });
 
     const y = useTransform(scrollYProgress, [0, 1], [0, 1000]);
     const y2 = useTransform(scrollYProgress, [0, 1], [0, 1000 * -1.2]);
     const y3 = useTransform(scrollYProgress, [0, 1], [0, 1000]);
-    const y4 = useTransform(container2Scroll.scrollYProgress, [0, 1], [2000, -100]);
-    const y5 = useTransform(container2Scroll.scrollYProgress, [0, 1], [300, 0]);
 
+
+    useEffect(() => {
+      animControls.current = animate([
+        ['#div-1', {transform: ['translate3d(100%, 0, 0)', 'translate3d(-100%, 0, 0)']}, {duration: 10, at: 0, ease: 'easeInOut'}],
+        ['#div-2', {transform: ['translate3d(-100%, 0, 0)', 'translate3d(100%, 0, 0)']}, {duration: 10, at: 0, ease: 'easeInOut'}],
+      ])
+      animControls.current.pause();
+
+    }, []);
     return (
         <>
             <div className="h-[70svh]">
@@ -101,7 +113,7 @@ export default function Home() {
                     The Layout
                 </h1>
             </div>
-            <div className="h-[70vh] flex-col flex">
+            <div className="h-[70vh] flex-col flex overflow-hidden">
               <div className="flex flex-col items-center">
                 <p className="mt-7 w-72 text-center"> 
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -109,16 +121,16 @@ export default function Home() {
                     nulla magnam beatae modi pariatur.
                 </p>
               </div>
-              <motion.div className="flex mx-10 justify-center overflow-hidden" style={{marginTop: y5}}>
-                  <motion.div style={{marginRight: y4}} className="flex mr-[90%] flex-col items-center overflow-hidden" id='decrease-margin'>
+              <div className="flex px-10 w-full mt-40 justify-between" ref={containerRef2}>
+                  <div className="flex w-1/4 flex-col items-center" id='div-1'>
                       <h1 className="text-4xl">50</h1>
-                      <p>of {"world's"} most <br /> fascinating minds and</p>
-                  </motion.div>
-                  <div className="flex flex-col items-center">
+                      <p className="break-words">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit error inventore aliquam nesciunt modi porro quos qui cupiditate aperiam atque.</p>
+                  </div>
+                  <div className="flex w-1/4 flex-col items-center" id='div-2'>
                       <h1 className="text-4xl">50</h1>
                       <p>of {"world's"} most <br /> fascinating minds and</p>
                   </div>
-              </motion.div>
+              </div>
             </div>
             <div className="h-screen mt-7"></div>
         </>
