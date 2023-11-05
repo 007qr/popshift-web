@@ -29,8 +29,8 @@ export default function Home() {
 
     useEffect(() => {
       animControls.current = animate([
-        ['#div-1', {transform: ['translate3d(100%, 0, 0)', 'translate3d(-100%, 0, 0)']}, {duration: 10, at: 0, ease: 'easeInOut'}],
-        ['#div-2', {transform: ['translate3d(-100%, 0, 0)', 'translate3d(100%, 0, 0)']}, {duration: 10, at: 0, ease: 'easeInOut'}],
+        ['#div-1', {transform: ['translate3d(-100%, 0, 0)', 'translate3d(100%, -50%, 0)']}, {duration: 10, at: 0, ease: 'easeInOut'}],
+        ['#div-2', {transform: ['translate3d(100%, 0, 0)', 'translate3d(-100%, -50%, 0)']}, {duration: 10, at: 0, ease: 'easeInOut'}],
       ])
       animControls.current.pause();
 
@@ -113,7 +113,7 @@ export default function Home() {
                     The Layout
                 </h1>
             </div>
-            <div className="h-[70vh] flex-col flex overflow-hidden">
+            <div className="h-[100vh] flex-col flex overflow-hidden" ref={containerRef2}>
               <div className="flex flex-col items-center">
                 <p className="mt-7 w-72 text-center"> 
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -121,7 +121,7 @@ export default function Home() {
                     nulla magnam beatae modi pariatur.
                 </p>
               </div>
-              <div className="flex px-10 w-full mt-40 justify-between" ref={containerRef2}>
+              <div className="flex px-10 w-full mt-40 justify-between">
                   <div className="flex w-1/4 flex-col items-center" id='div-1'>
                       <h1 className="text-4xl">50</h1>
                       <p className="break-words">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit error inventore aliquam nesciunt modi porro quos qui cupiditate aperiam atque.</p>
