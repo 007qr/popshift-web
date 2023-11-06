@@ -44,7 +44,7 @@ export default function Section1() {
                     >
                         <motion.p className="text-7xl text-center font-bold" style={{position: 'fixed', top:'40px'}} >The Purpose</motion.p>
                         <motion.p
-                            style={{ position: "fixed", top: "160px", y: 200 }}
+                            style={{ position: "fixed", top: "160px", y: 200, opacity: 0 }}
                             className="w-1/2 text-center text-2xl"
                         >
                             Lorem ipsum dolor sit amet consectetur adipisicing
@@ -54,7 +54,7 @@ export default function Section1() {
                             recusandae nostrum ea facilis earum quod?
                         </motion.p>
                         <motion.p
-                            style={{ position: "fixed", top: "320px", y: 700 }}
+                            style={{ position: "fixed", top: "320px", y: 700, opacity: 0 }}
                             className="w-1/2 text-center text-2xl"
                         >
                             Lorem ipsum dolor sit amet consectetur adipisicing
@@ -64,7 +64,7 @@ export default function Section1() {
                             recusandae nostrum ea facilis earum quod?
                         </motion.p>
                         <motion.p
-                            style={{ position: "fixed", top: "460px", y: 800 }}
+                            style={{ position: "fixed", top: "460px", y: 800, opacity: 0 }}
                             className="w-1/2 text-center text-2xl"
                         >
                             Lorem ipsum dolor sit amet consectetur adipisicing
@@ -74,7 +74,7 @@ export default function Section1() {
                             recusandae nostrum ea facilis earum quod?
                         </motion.p>
                         <motion.p
-                            style={{ position: "fixed", top: "480px", y: 900 }}
+                            style={{ position: "fixed", top: "480px", y: 900, opacity: 0 }}
                             className="w-1/2 text-center text-2xl"
                         >
                             Lorem ipsum dolor sit amet consectetur adipisicing
