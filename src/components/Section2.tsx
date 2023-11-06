@@ -30,7 +30,7 @@ export default function Section2() {
                         "translate3d(0, -100%, 0)",
                     ],
                 },
-                { delay: stagger(1), duration: 9, ease: "easeIn" },
+                { delay: stagger(1), duration: 7, ease: "easeIn" },
             ],
         ]);
 
@@ -44,13 +44,11 @@ export default function Section2() {
                     className="sticky top-0 flex items-center justify-center h-min"
                     id="p"
                 >
-                    <p>P</p>
-                    <p>O</p>
-                    <p>P</p>
-                    <p>S</p>
-                    <p>H</p>
                     <p>I</p>
-                    <p>F</p>
+                    <p>N</p>
+                    <p>V</p>
+                    <p>E</p>
+                    <p>N</p>
                     <p>T</p>
                 </div>
             </div>
