@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.marquee {
+    overflow: hidden;
+    display: flex;
+    /* height: 100vh; */
+    align-items: center;
+    cursor: -webkit-grab;
+    z-index: 1;
+}
+
+.item {
+    font-size: 50px;
+    letter-spacing: -0.05em;
+    padding-right: 1em;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    user-select: none;
+    color: white;
+    /* will-change: transform; */
+}
+.outline-text {
+    @apply text-black tracking-[2px];
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}

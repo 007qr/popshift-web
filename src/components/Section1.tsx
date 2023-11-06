@@ -4,89 +4,110 @@ import {
     AnimationPlaybackControls,
     animate,
     stagger,
+    motion,
     useScroll,
 } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { InteractiveMarquee } from "./Marquee";
 
 export default function Section1() {
-    const containerRef = useRef<HTMLDivElement>(null);
-    const containerRef2 = useRef<HTMLDivElement>(null);
+    const ref = useRef<HTMLDivElement>(null);
     const animControls = useRef<AnimationPlaybackControls>();
-    const animControls2 = useRef<AnimationPlaybackControls>();
-
 
     useScroll({
-        target: containerRef,
-        offset: ["start start", "end start"],
+        target: ref,
+        offset: ["start center", "end start"],
     }).scrollYProgress.on("change", (yProgress) => {
         if (!animControls.current) return;
         animControls.current.time = yProgress * animControls.current.duration;
     });
 
-    useScroll({
-        target: containerRef2,
-        offset: ['start end', 'end start']
-    }).scrollYProgress.on("change", (yProgress) => {
-        if (!animControls2.current) return;
-        animControls2.current.time = yProgress * animControls2.current.duration;
-    })
-
     useEffect(() => {
         animControls.current = animate([
             [
-                "div p",
-                {
-                    transform: [
-                        "translate3d(0, 0, 0)",
-                        "translate3d(0, -100%, 0)",
-                    ],
-                },
-                { delay: stagger(1), duration: 9, ease: "easeIn" },
+                "div#s p",
+                { y: 0, opacity: [0, 1] },
+                { delay: stagger(10), ease: "easeInOut", duration: 10 },
             ],
         ]);
 
-        animControls2.current = animate([
-            // ["#static-container h3", {top: 0}, {}]
-        ])
-
         animControls.current.pause();
-        animControls2.current.pause();
     }, []);
 
     return (
         <>
-            <div
-                className="items-center justify-center h-screen text-[250px] bg-black text-white font-bold flex"
-                ref={containerRef}
-            >
-                <div className="sticky top-0 flex items-center justify-center h-min">
-                    <p className="">P</p>
-                    <p className="">O</p>
-                    <p className="">P</p>
-                    <p className="">S</p>
-                    <p className="">H</p>
-                    <p className="">I</p>
-                    <p className="">F</p>
-                    <p className="">T</p>
+            <div className="" ref={ref}>
+                <div className="bg-white text-black relative h-[350vh]">
+                    <div
+                        className="w-full h-full flex flex-col items-center"
+                        id="s"
+                    >
+                        <motion.p className="text-7xl text-center font-bold" style={{position: 'fixed', top:'40px'}} >The Purpose</motion.p>
+                        <motion.p
+                            style={{ position: "fixed", top: "160px", y: 200 }}
+                            className="w-1/2 text-center"
+                        >
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Perferendis aut animi asperiores itaque
+                            reprehenderit, quam, modi reiciendis neque harum
+                            fugiat alias perspiciatis! Officia voluptates
+                            recusandae nostrum ea facilis earum quod?
+                        </motion.p>
+                        <motion.p
+                            style={{ position: "fixed", top: "240px", y: 700 }}
+                            className="w-1/2 text-center"
+                        >
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Perferendis aut animi asperiores itaque
+                            reprehenderit, quam, modi reiciendis neque harum
+                            fugiat alias perspiciatis! Officia voluptates
+                            recusandae nostrum ea facilis earum quod?
+                        </motion.p>
+                        <motion.p
+                            style={{ position: "fixed", top: "320px", y: 800 }}
+                            className="w-1/2 text-center"
+                        >
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Perferendis aut animi asperiores itaque
+                            reprehenderit, quam, modi reiciendis neque harum
+                            fugiat alias perspiciatis! Officia voluptates
+                            recusandae nostrum ea facilis earum quod?
+                        </motion.p>
+                        <motion.p
+                            style={{ position: "fixed", top: "400px", y: 900 }}
+                            className="w-1/2 text-center"
+                        >
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Perferendis aut animi asperiores itaque
+                            reprehenderit, quam, modi reiciendis neque harum
+                            fugiat alias perspiciatis! Officia voluptates
+                            recusandae nostrum ea facilis earum quod?
+                        </motion.p>
+                    </div>
                 </div>
             </div>
-            <div className="h-[100svh] bg-black" ref={containerRef2}>
-                <div className="flex flex-col items-center justify-center relative h-screen" id='static-container'>
-                    <h3 className="bg-black text-white text-3xl text-center sticky top-20 mt-[400px]">
-                        Convening {"Hollywood's"}
-                    </h3>
-                    <h3 className="mt-[200px] bg-black text-white text-3xl sticky text-center top-[120px]">
-                        Most influential storytellers
-                    </h3>
-                    <h3 className="mt-[200px] bg-black text-white text-3xl sticky text-center top-[180px]">
-                        and the {"world's"}
-                    </h3>
-                    <h3 className="mt-[200px] mb-[300px] bg-black text-white  text-3xl sticky text-center top-[500px]">
-                        most insightful, interseting, and important people
-                        Privately and intimately
-                    </h3>
-                </div>
-                    <div className="h-[20svh] bg-black">l</div>
+
+            <div className="bg-black text-white flex">
+                <InteractiveMarquee speed={1}>
+                    <button draggable="false">50 WRITERS</button>
+                    <button draggable="false" className="outline-text">
+                        1 TOPIC
+                    </button>
+                    <button draggable="false" className="outline-text">
+                        1 ROOM
+                    </button>
+                    <button draggable="false">50 WRITERS</button>
+                    <button draggable="false">50 WRITERS</button>
+                    <button draggable="false" className="outline-text">
+                        1 TOPIC
+                    </button>
+                    <button draggable="false" className="outline-text">
+                        1 TOPIC
+                    </button>
+                    <button draggable="false" className="outline-text">
+                        1 ROOM
+                    </button>
+                </InteractiveMarquee>
             </div>
         </>
     );

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useTransform, useScroll, motion, MotionValue, AnimationPlaybackControls, animate } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Section1 from "~/components/Section1";
+import Section2 from "~/components/Section2";
 
 export default function Home() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -39,22 +40,23 @@ export default function Home() {
     }, []);
     return (
         <>
+            <Section2 />
            <Section1 />
-            <div className="h-[70svh]">
-                <div className="sticky top-0 text-center">
+            <div className="h-[70svh] pt-20 z-10 bg-white relative">
+                <div className="sticky top-20 text-center">
                     <h1 className="text-7xl tracking-tighter font-bold">
                         TV Shows
                     </h1>
                 </div>
             </div>
-            <div className="flex justify-center mt-2">
+            <div className="flex justify-center pt-2 bg-white z-10 relative">
                 <p className="w-60 text-center">
                     Alongside showrunners and writers of some of{" "}
                     {"television's"} most popular shows
                 </p>
             </div>
             <div
-                className="h-[155vh] mt-[15vh] overflow-hidden"
+                className="h-[155vh] pt-[15vh] overflow-hidden bg-white z-10 relative"
                 ref={containerRef}
             >
                 <div className="w-full h-full flex flex-col gap-[1vh] relative">
@@ -108,7 +110,7 @@ export default function Home() {
                     />
                 </div>
             </div>
-            <div className="h-[80svh]">
+            <div className="h-[80svh] relative z-10 bg-white">
                 <h1
                     className="text-7xl text-center sticky top-10"
                     style={{ fontFamily: "Times New Roman" }}
@@ -116,7 +118,7 @@ export default function Home() {
                     The Layout
                 </h1>
             </div>
-            <div className="h-[100vh] flex-col flex overflow-hidden" ref={containerRef2}>
+            <div className="h-[100vh] flex-col flex overflow-hidden bg-white z-10 relative" ref={containerRef2}>
               <div className="flex flex-col items-center">
                 <p className="mt-7 w-72 text-center"> 
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -135,7 +137,6 @@ export default function Home() {
                   </div>
               </div>
             </div>
-            <div className="h-screen mt-7"></div>
         </>
     );
 }
