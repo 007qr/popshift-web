@@ -8,7 +8,6 @@ import {
     useScroll,
 } from "framer-motion";
 import { useEffect, useRef } from "react";
-import { InteractiveMarquee } from "./Marquee";
 
 export default function Section3() {
     const ref4 = useRef<HTMLDivElement>(null);
@@ -43,8 +42,8 @@ export default function Section3() {
                         id="ss"
                     >
                         <motion.p
-                            style={{ position: "fixed", top: "160px", y: 200 }}
-                            className="w-1/2 text-center"
+                            style={{ position: "fixed", top: "160px", y: 300 }}
+                            className="w-1/2 text-center text-2xl"
                         >
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Perferendis aut animi asperiores itaque
@@ -53,8 +52,8 @@ export default function Section3() {
                             recusandae nostrum ea facilis earum quod?
                         </motion.p>
                         <motion.p
-                            style={{ position: "fixed", top: "240px", y: 700 }}
-                            className="w-1/2 text-center"
+                            style={{ position: "fixed", top: "320px", y: 700 }}
+                            className="w-1/2 text-center text-2xl"
                         >
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Perferendis aut animi asperiores itaque
@@ -63,8 +62,8 @@ export default function Section3() {
                             recusandae nostrum ea facilis earum quod?
                         </motion.p>
                         <motion.p
-                            style={{ position: "fixed", top: "320px", y: 800 }}
-                            className="w-1/2 text-center"
+                            style={{ position: "fixed", top: "460px", y: 800 }}
+                            className="w-1/2 text-center text-2xl"
                         >
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Perferendis aut animi asperiores itaque
@@ -73,8 +72,8 @@ export default function Section3() {
                             recusandae nostrum ea facilis earum quod?
                         </motion.p>
                         <motion.p
-                            style={{ position: "fixed", top: "400px", y: 900 }}
-                            className="w-1/2 text-center"
+                            style={{ position: "fixed", top: "480px", y: 900 }}
+                            className="w-1/2 text-center text-2xl"
                         >
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Perferendis aut animi asperiores itaque

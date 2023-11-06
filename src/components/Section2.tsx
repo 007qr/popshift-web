@@ -38,7 +38,7 @@ export default function Section2() {
 
     return (
         <>
-            <div className="items-center justify-center h-screen text-[250px] bg-black text-white font-bold flex" ref={ref3}>
+            <div className="items-center justify-center h-screen text-[350px] bg-black text-white font-bold flex" ref={ref3}>
                 <div
                     className="sticky top-0 flex items-center justify-center h-min"
                     id="p"
