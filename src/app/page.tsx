@@ -6,6 +6,7 @@ import Section1 from "~/components/Section1";
 import Section2 from "~/components/Section2";
 import Section3 from "~/components/Section3";
 import EventList from "~/components/EventList";
+import HeroSection from "~/components/HeroSection";
 
 export default function Home() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -42,7 +43,8 @@ export default function Home() {
     }, []);
     return (
         <>
-            <Section2 />
+        <HeroSection/>
+            {/* <Section2 /> */}
             <Section3 />
            <Section1 />
             <div className="h-[70svh] pt-20 z-10 bg-white relative">
