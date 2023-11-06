@@ -5,7 +5,6 @@ import {
     useScroll,
 } from "framer-motion";
 import { useEffect, useRef } from "react";
-import { InteractiveMarquee } from "./Marquee";
 
 export default function Section2() {
     const ref3 = useRef<HTMLDivElement>(null);

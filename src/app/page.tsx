@@ -4,6 +4,7 @@ import { useTransform, useScroll, motion, MotionValue, AnimationPlaybackControls
 import { useEffect, useRef } from "react";
 import Section1 from "~/components/Section1";
 import Section2 from "~/components/Section2";
+import Section3 from "~/components/Section3";
 
 export default function Home() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -41,6 +42,7 @@ export default function Home() {
     return (
         <>
             <Section2 />
+            <Section3 />
            <Section1 />
             <div className="h-[70svh] pt-20 z-10 bg-white relative">
                 <div className="sticky top-20 text-center">
