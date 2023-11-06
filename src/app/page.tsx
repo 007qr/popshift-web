@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react";
 import Section1 from "~/components/Section1";
 import Section2 from "~/components/Section2";
 import Section3 from "~/components/Section3";
+import EventList from "~/components/EventList";
 
 export default function Home() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -33,8 +34,8 @@ export default function Home() {
 
     useEffect(() => {
       animControls.current = animate([
-        ['#div-1', {transform: ['translate3d(-100%, 0, 0)', 'translate3d(100%, -50%, 0)']}, {duration: 10, at: 0, ease: 'easeInOut'}],
-        ['#div-2', {transform: ['translate3d(100%, 0, 0)', 'translate3d(-100%, -50%, 0)']}, {duration: 10, at: 0, ease: 'easeInOut'}],
+        ['#div-1', {transform: ['translate3d(-100%, 0, 0)', 'translate3d(100%, 0, 0)']}, {duration: 10, at: 0, ease: 'easeInOut'}],
+        ['#div-2', {transform: ['translate3d(100%, 0, 0)', 'translate3d(-100%, 0, 0)']}, {duration: 10, at: 0, ease: 'easeInOut'}],
       ])
       animControls.current.pause();
 
@@ -139,6 +140,13 @@ export default function Home() {
                   </div>
               </div>
             </div>
+
+            <div className="flex items-center justify-center">
+                <div className="relative -mt-[20svh] z-50 flex items-center w-full">
+                    <EventList />
+                </div>
+            </div>
+            <div className="h-screen relative z-50 bg-white"></div>
         </>
     );
 }
