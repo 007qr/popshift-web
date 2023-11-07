@@ -42,8 +42,8 @@ export default function Section3() {
                         id="ss"
                     >
                         <motion.p
-                            style={{ position: "fixed", top: "160px", y: 300, opacity: 0 }}
-                            className="w-1/2 text-center text-2xl"
+                            style={{ position: "fixed", y: 300, opacity: 0 }}
+                            className="xl:w-1/2 w-full sm:w-[84%] md:w-[70%] sm:px-0 px-2   text-center  md:text-xl xl:text-2xl top-[60px] md:top-[90px]  xl:top-[160px]"
                         >
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Perferendis aut animi asperiores itaque
@@ -52,8 +52,8 @@ export default function Section3() {
                             recusandae nostrum ea facilis earum quod?
                         </motion.p>
                         <motion.p
-                            style={{ position: "fixed", top: "320px", y: 700, opacity: 0 }}
-                            className="w-1/2 text-center text-2xl"
+                            style={{ position: "fixed", y: 700, opacity: 0 }}
+                            className="xl:w-1/2 w-full sm:w-[84%] md:w-[70%]  text-center sm:px-0 px-2  md:text-xl xl:text-2xl top-[240px] md:top-[240px] xl:top-[320px]"
                         >
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Perferendis aut animi asperiores itaque
@@ -62,8 +62,8 @@ export default function Section3() {
                             recusandae nostrum ea facilis earum quod?
                         </motion.p>
                         <motion.p
-                            style={{ position: "fixed", top: "460px", y: 800, opacity: 0 }}
-                            className="w-1/2 text-center text-2xl"
+                            style={{ position: "fixed", y: 800, opacity: 0 }}
+                            className="xl:w-1/2 w-full sm:w-[84%] md:w-[70%]  text-center sm:px-0 px-2  md:text-xl xl:text-2xl top-[420px] md:top-[390px] xl:top-[460px]"
                         >
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Perferendis aut animi asperiores itaque
@@ -72,8 +72,8 @@ export default function Section3() {
                             recusandae nostrum ea facilis earum quod?
                         </motion.p>
                         <motion.p
-                            style={{ position: "fixed", top: "480px", y: 900, opacity: 0 }}
-                            className="w-1/2 text-center text-2xl"
+                            style={{ position: "fixed", y: 900, opacity: 0 }}
+                            className="xl:w-1/2 w-[84%] md:w-[70%]  text-center text-2xl top-[480px]"
                         >
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Perferendis aut animi asperiores itaque

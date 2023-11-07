@@ -12,10 +12,10 @@ function Events({ heading, events }: { heading:string, events: Event[] }) {
                     <div>{heading}</div>
                 </div>
             </div>
-            {events.map((event) => {
+            {events.map((event, idx) => {
                 return (
                     <>
-                        <div className="flex justify-center items-center border-t border-black py-6" id='event'>
+                        <div className="flex justify-center items-center border-t border-black py-6" id='event' key={`${event}__${idx}`}>
                             <div className="max-w-[1440px] w-11/12">
                                 <div className="flex justify-between items-center ">
                                     <h4 className="text-2xl font-medium">{event.name}</h4>

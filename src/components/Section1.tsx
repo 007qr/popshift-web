@@ -27,7 +27,7 @@ export default function Section1() {
             [
                 "div#s p",
                 { y: 0, opacity: [0, 1] },
-                { delay: stagger(10), ease: "easeInOut", duration: 10 },
+                { delay: stagger(10.1), ease: "easeInOut", duration: 10 },
             ],
         ]);
 
@@ -37,15 +37,24 @@ export default function Section1() {
     return (
         <>
             <div className="" ref={ref}>
-                <div className="bg-white text-black relative h-[350vh]">
+                <div className="bg-white text-black relative h-[400vh]">
                     <div
                         className="w-full h-full flex flex-col items-center"
                         id="s"
                     >
-                        <motion.p className="text-7xl text-center font-bold" style={{position: 'fixed', top:'40px'}} >The Purpose</motion.p>
                         <motion.p
-                            style={{ position: "fixed", top: "160px", y: 200, opacity: 0 }}
-                            className="w-1/2 text-center text-2xl"
+                            className="text-4xl md:text-5xl xl:text-6xl lg:text-7xl text-center font-bold "
+                            style={{
+                                position: "fixed",
+                                top: "40px",
+                                opacity: 0,
+                            }}
+                        >
+                            The Purpose
+                        </motion.p>
+                        <motion.p
+                            style={{ position: "fixed", y: 200, opacity: 0 }}
+                            className="xl:w-1/2 w-full sm:w-[84%] md:w-[70%] sm:px-0 px-2 text-center md:text-xl xl:text-2xl top-[100px] md:top-[120px] lg:top-[140px] xl:top-[180px] "
                         >
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Perferendis aut animi asperiores itaque
@@ -54,8 +63,8 @@ export default function Section1() {
                             recusandae nostrum ea facilis earum quod?
                         </motion.p>
                         <motion.p
-                            style={{ position: "fixed", top: "320px", y: 700, opacity: 0 }}
-                            className="w-1/2 text-center text-2xl"
+                            style={{ position: "fixed", y: 700, opacity: 0 }}
+                            className="xl:w-1/2 w-full sm:w-[84%] md:w-[70%] text-center sm:px-0 px-2  md:text-xl xl:text-2xl top-[250px] md:top-[260px] lg:top-[270px] xl:top-[320px] "
                         >
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Perferendis aut animi asperiores itaque
@@ -64,8 +73,8 @@ export default function Section1() {
                             recusandae nostrum ea facilis earum quod?
                         </motion.p>
                         <motion.p
-                            style={{ position: "fixed", top: "460px", y: 800, opacity: 0 }}
-                            className="w-1/2 text-center text-2xl"
+                            style={{ position: "fixed", y: 800, opacity: 0 }}
+                            className="xl:w-1/2 w-full sm:w-[84%] md:w-[70%] text-center sm:px-0 px-2  md:text-xl xl:text-2xl top-[420px] md:top-[410px] lg:top-[400px] xl:top-[460px] "
                         >
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Perferendis aut animi asperiores itaque
@@ -74,7 +83,7 @@ export default function Section1() {
                             recusandae nostrum ea facilis earum quod?
                         </motion.p>
                         <motion.p
-                            style={{ position: "fixed", top: "480px", y: 900, opacity: 0 }}
+                            style={{ position: "fixed", y: 900, opacity: 0 }}
                             className="w-1/2 text-center text-2xl"
                         >
                             Lorem ipsum dolor sit amet consectetur adipisicing

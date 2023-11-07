@@ -3,7 +3,6 @@ import Image from "next/image";
 import { useTransform, useScroll, motion, MotionValue, AnimationPlaybackControls, animate } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Section1 from "~/components/Section1";
-import Section2 from "~/components/Section2";
 import Section3 from "~/components/Section3";
 import EventList from "~/components/EventList";
 import HeroSection from "~/components/HeroSection";
@@ -123,7 +122,7 @@ export default function Home() {
                     The Layout
                 </h1>
             </div>
-            <div className="h-[100vh] flex-col flex overflow-hidden bg-white z-10 relative" ref={containerRef2}>
+            <div className="h-[100vh] w-full flex-col flex overflow-hidden bg-white z-10 relative" ref={containerRef2}>
               <div className="flex flex-col items-center">
                 <p className="mt-7 w-72 text-center"> 
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -131,7 +130,7 @@ export default function Home() {
                     nulla magnam beatae modi pariatur.
                 </p>
               </div>
-              <div className="flex px-10 w-full mt-40 justify-between">
+              <div className="flex md:px-10 w-full gap-10 mt-40 justify-between">
                   <div className="flex w-1/4 flex-col items-center" id='div-1'>
                       <h1 className="text-4xl">50</h1>
                       <p className="break-words">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit error inventore aliquam nesciunt modi porro quos qui cupiditate aperiam atque.</p>
@@ -169,7 +168,7 @@ const Row = ({
         >
             {images.map((v, i) => {
                 return (
-                    <div key={i} className="relative w-[250px] h-[340px]">
+                    <div key={i} className="relative w-[116px] h-[173px] md:w-[250px] md:h-[340px]">
                         <Image
                             src={v}
                             fill
